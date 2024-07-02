@@ -9,7 +9,7 @@ License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
 
-WP Simple Pie Chart Block is a WordPress plugin that provides a Gutenberg block for creating simple and customizable pie charts. This block allows users to add, edit, and visualize pie chart slices with ease.
+WP Simple Pie Chart Block allows you to create elegant and minimal pie charts using the ChartJS library.
 
 ## Features
 
