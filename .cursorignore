@@ -1,0 +1,11 @@
+# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
+./node_modules
+/dist/
+/build/
+./package-lock.json
+./package.json
+./yarn.lock
+./yarn-debug.log
+./yarn-debug.log.*
+./yarn-error.log
+./yarn-error.log.*

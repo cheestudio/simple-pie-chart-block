@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "chee-block/wp-simple-pie-chart-block",
+  "version": "0.1.0",
+  "title": "Simple Pie Chart",
+  "category": "text",
+  "icon": "chart-pie",
+  "description": "A block for creating simple and easy pie charts",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "render": "file:./render.php",
+  "textdomain": "chee-blocks",
+  "attributes": {
+    "slices": {
+      "type": "array",
+      "default": [
+        {
+          "sliceTitle": "",
+          "sliceColor": "#666",
+          "slicePercentage": 10,
+          "sliceValue": ""
+        }
+      ]
+    },
+    "showLegend": {
+      "type": "boolean",
+      "default": true
+    },
+    "legendBG": {
+      "type": "string",
+      "default": "#fff"
+    },
+    "legendStyle": {
+      "type": "string",
+      "default": "line"
+    },
+    "chartType": {
+      "type": "string",
+      "default": "Pie"
+    },
+    "chartWidth": {
+      "type": "number",
+      "default": 800
+    }
+  }
+}
