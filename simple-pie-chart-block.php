@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       WP Simple Pie Chart Block
- * Description:       A block for creating simple and easy pie charts
+ * Plugin Name:       Simple Pie Chart Block for WP
+ * Description:       Simple Pie Chart Block allows you to create elegant and minimal pie charts using the ChartJS library.
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           1.4
@@ -18,7 +18,7 @@
 	exit; // Exit if accessed directly
 }
 
-function wp_simple_pie_chart_block_init() {
+function simple_pie_chart_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
-add_action( 'init', 'wp_simple_pie_chart_block_init' );
+add_action( 'init', 'simple_pie_chart_block_init' );

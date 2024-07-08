@@ -1,1 +1,16 @@
-.pie-chart-controls .add-slice-button{margin:15px}.pie-chart-controls .components-panel__body-title button.components-button{color:#444;font-weight:500}.slice-entry-controls{align-items:center;display:flex;gap:10px}
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+.pie-chart-controls .add-slice-button {
+  margin: 15px;
+}
+.pie-chart-controls .components-panel__body-title button.components-button {
+  color: #444;
+  font-weight: 500;
+}
+
+.slice-entry-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

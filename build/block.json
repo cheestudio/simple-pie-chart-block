@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "chee-block/wp-simple-pie-chart-block",
+  "name": "chee-block/simple-pie-chart-block",
   "version": "0.1.0",
-  "title": "Simple Pie Chart",
+  "title": "Simple Pie Chart Block",
   "category": "text",
   "icon": "chart-pie",
-  "description": "A block for creating simple and easy pie charts",
+  "description": "Simple Pie Chart Block allows you to create elegant and minimal pie charts using the ChartJS library.",
   "example": {},
   "supports": {
     "html": false
