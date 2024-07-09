@@ -4,10 +4,9 @@
 	"name": "chee-block/simple-pie-chart-block",
 	"version": "0.1.0",
 	"title": "Simple Pie Chart Block",
-	"category": "text",
+	"category": "design",
 	"icon": "chart-pie",
 	"description": "Simple Pie Chart Block allows you to create elegant and minimal pie charts using the ChartJS library.",
-	"example": {},
 	"supports": {
 		"html": false
 	},
@@ -48,6 +47,35 @@
 		"chartWidth": {
 			"type": "number",
 			"default": 800
+		}
+	},
+	"example": {
+		"attributes": {
+			"slices": [
+				{
+					"sliceTitle": "Example Slice 1",
+					"sliceColor": "#ff0000",
+					"slicePercentage": 25,
+					"sliceValue": "25%"
+				},
+				{
+					"sliceTitle": "Example Slice 2",
+					"sliceColor": "#00ff00",
+					"slicePercentage": 50,
+					"sliceValue": "50%"
+				},
+				{
+					"sliceTitle": "Example Slice 3",
+					"sliceColor": "#0000ff",
+					"slicePercentage": 25,
+					"sliceValue": "25%"
+				}
+			],
+			"showLegend": true,
+			"legendBG": "#f0f0f0",
+			"legendStyle": "line",
+			"chartType": "Pie",
+			"chartWidth": 800
 		}
 	}
 }

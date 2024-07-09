@@ -9,9 +9,9 @@
  * Author URI:        https://chee.studio
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       wp-simple-pie-chart-block
+ * Text Domain:       simple-pie-chart-block
  *
- * @package WP Simple Pie Chart Block
+ * @package Simple Pie Chart Block for WP
  */
 
  if (!defined('ABSPATH')) {
