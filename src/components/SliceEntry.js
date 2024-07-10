@@ -1,7 +1,7 @@
 import { __ } from '@wordpress/i18n';
 import { BaseControl, TextControl, RangeControl, ColorPalette, Button, Icon, PanelBody } from "@wordpress/components";
 
-const SliceEntry = ({ id, slice, colorPalette, onTitleChange, onPercentageChange, onRemoveSlice, onColorChange, onValueChange }) => {
+const SliceEntry = ({ id, slice, colorPalette, onChange, onRemoveSlice }) => {
 
   const sliceTitle = slice.sliceTitle ? `Slice: ${slice.sliceTitle}` : `Slice ${id + 1}`;
 
@@ -13,13 +13,13 @@ const SliceEntry = ({ id, slice, colorPalette, onTitleChange, onPercentageChange
             label={__('Slice Title', 'chee-blocks')} 
             value={slice.sliceTitle} 
             placeholder={__('e.g. Category Title', 'chee-blocks')} 
-            onChange={(value) => onTitleChange(id, value)} 
+            onChange={(value) => onChange(id, 'sliceTitle', value)} 
           />
           <TextControl 
             label={__('Slice Value', 'chee-blocks')} 
             value={slice.sliceValue} 
             placeholder={__('e.g. $1,000', 'chee-blocks')} 
-            onChange={(value) => onValueChange(id, value)} 
+            onChange={(value) => onChange(id, 'sliceValue', value)} 
           />
           <Button 
             aria-label={__('Remove Slice', 'chee-blocks')} 
@@ -32,7 +32,7 @@ const SliceEntry = ({ id, slice, colorPalette, onTitleChange, onPercentageChange
         <RangeControl
           label={__('Slice Percentage', 'chee-blocks')}
           value={slice.slicePercentage}
-          onChange={(percentage) => onPercentageChange(id, percentage)}
+          onChange={(percentage) => onChange(id, 'slicePercentage', percentage)}
           min={0}
           max={100}
           step={0.1}
@@ -47,7 +47,7 @@ const SliceEntry = ({ id, slice, colorPalette, onTitleChange, onPercentageChange
             aria-label={__('Color palette for slice', 'chee-blocks') + ` ${id + 1}`}
             colors={colorPalette}
             value={slice.sliceColor}
-            onChange={(color) => onColorChange(id, color)}
+            onChange={(color) => onChange(id, 'sliceColor', color)}
           />
         </BaseControl>
       </div>

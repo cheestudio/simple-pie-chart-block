@@ -254,11 +254,8 @@ const SliceEntries = ({
     id: index,
     slice: slice,
     colorPalette: colorPalette,
-    onTitleChange: (id, value) => handleUpdateSlice(id, 'sliceTitle', value),
-    onRemoveSlice: handleRemoveSlice,
-    onColorChange: (id, value) => handleUpdateSlice(id, 'sliceColor', value),
-    onPercentageChange: (id, value) => handleUpdateSlice(id, 'slicePercentage', value),
-    onValueChange: (id, value) => handleUpdateSlice(id, 'sliceValue', value)
+    onChange: (id, attribute, value) => handleUpdateSlice(id, attribute, value),
+    onRemoveSlice: handleRemoveSlice
   })));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SliceEntries);
@@ -288,11 +285,8 @@ const SliceEntry = ({
   id,
   slice,
   colorPalette,
-  onTitleChange,
-  onPercentageChange,
-  onRemoveSlice,
-  onColorChange,
-  onValueChange
+  onChange,
+  onRemoveSlice
 }) => {
   const sliceTitle = slice.sliceTitle ? `Slice: ${slice.sliceTitle}` : `Slice ${id + 1}`;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
@@ -306,12 +300,12 @@ const SliceEntry = ({
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slice Title', 'chee-blocks'),
     value: slice.sliceTitle,
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('e.g. Category Title', 'chee-blocks'),
-    onChange: value => onTitleChange(id, value)
+    onChange: value => onChange(id, 'sliceTitle', value)
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slice Value', 'chee-blocks'),
     value: slice.sliceValue,
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('e.g. $1,000', 'chee-blocks'),
-    onChange: value => onValueChange(id, value)
+    onChange: value => onChange(id, 'sliceValue', value)
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Remove Slice', 'chee-blocks'),
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Remove Slice', 'chee-blocks'),
@@ -321,7 +315,7 @@ const SliceEntry = ({
   }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slice Percentage', 'chee-blocks'),
     value: slice.slicePercentage,
-    onChange: percentage => onPercentageChange(id, percentage),
+    onChange: percentage => onChange(id, 'slicePercentage', percentage),
     min: 0,
     max: 100,
     step: 0.1
@@ -334,7 +328,7 @@ const SliceEntry = ({
     "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Color palette for slice', 'chee-blocks') + ` ${id + 1}`,
     colors: colorPalette,
     value: slice.sliceColor,
-    onChange: color => onColorChange(id, color)
+    onChange: color => onChange(id, 'sliceColor', color)
   }))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SliceEntry);
@@ -17570,7 +17564,7 @@ const Scatter = /* #__PURE__ */ createTypedChart("scatter", chart_js__WEBPACK_IM
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"chee-block/simple-pie-chart-block","version":"0.1.0","title":"Simple Pie Chart Block","category":"design","icon":"chart-pie","description":"Simple Pie Chart Block allows you to create elegant and minimal pie charts using the ChartJS library.","supports":{"html":false},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","render":"file:./render.php","textdomain":"chee-blocks","attributes":{"slices":{"type":"array","default":[{"sliceTitle":"","sliceColor":"#666","slicePercentage":10,"sliceValue":""}]},"showLegend":{"type":"boolean","default":true},"legendBG":{"type":"string","default":"#fff"},"legendStyle":{"type":"string","default":"line"},"chartType":{"type":"string","default":"Pie"},"chartWidth":{"type":"number","default":800}},"example":{"attributes":{"slices":[{"sliceTitle":"Example Slice 1","sliceColor":"#ff0000","slicePercentage":25,"sliceValue":"25%"},{"sliceTitle":"Example Slice 2","sliceColor":"#00ff00","slicePercentage":50,"sliceValue":"50%"},{"sliceTitle":"Example Slice 3","sliceColor":"#0000ff","slicePercentage":25,"sliceValue":"25%"}],"showLegend":true,"legendBG":"#f0f0f0","legendStyle":"line","chartType":"Pie","chartWidth":800}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"chee-block/simple-pie-chart-block","version":"0.1.0","title":"Simple Pie Chart Block","category":"design","icon":"chart-pie","description":"Create simple and elegant pie & doughnut charts.","supports":{"html":false},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","render":"file:./render.php","textdomain":"chee-blocks","attributes":{"slices":{"type":"array","default":[{"sliceTitle":"","sliceColor":"#666","slicePercentage":10,"sliceValue":""}]},"showLegend":{"type":"boolean","default":true},"legendBG":{"type":"string","default":"#fff"},"legendStyle":{"type":"string","default":"line"},"chartType":{"type":"string","default":"Pie"},"chartWidth":{"type":"number","default":800}},"example":{"attributes":{"slices":[{"sliceTitle":"Example Slice 1","sliceColor":"#ff0000","slicePercentage":25,"sliceValue":"25%"},{"sliceTitle":"Example Slice 2","sliceColor":"#00ff00","slicePercentage":50,"sliceValue":"50%"},{"sliceTitle":"Example Slice 3","sliceColor":"#0000ff","slicePercentage":25,"sliceValue":"25%"}],"showLegend":true,"legendBG":"#f0f0f0","legendStyle":"line","chartType":"Pie","chartWidth":800}}}');
 
 /***/ })
 

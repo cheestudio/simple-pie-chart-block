@@ -6,7 +6,7 @@
 	"title": "Simple Pie Chart Block",
 	"category": "design",
 	"icon": "chart-pie",
-	"description": "Simple Pie Chart Block allows you to create elegant and minimal pie charts using the ChartJS library.",
+	"description": "Create simple and elegant pie & doughnut charts.",
 	"supports": {
 		"html": false
 	},

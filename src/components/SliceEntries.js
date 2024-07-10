@@ -9,11 +9,8 @@ const SliceEntries = ({ slices, colorPalette, handleUpdateSlice, handleRemoveSli
           id={index}
           slice={slice}
           colorPalette={colorPalette}
-          onTitleChange={(id, value) => handleUpdateSlice(id, 'sliceTitle', value)}
+          onChange={(id, attribute, value) => handleUpdateSlice(id, attribute, value)}
           onRemoveSlice={handleRemoveSlice}
-          onColorChange={(id, value) => handleUpdateSlice(id, 'sliceColor', value)}
-          onPercentageChange={(id, value) => handleUpdateSlice(id, 'slicePercentage', value)}
-          onValueChange={(id, value) => handleUpdateSlice(id, 'sliceValue', value)}
         />
       ))}
     </>
